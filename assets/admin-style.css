@@ -1,0 +1,117 @@
+.wp-picker-input-wrap {
+	display:block!important;
+}
+
+.fbs-small{
+	display: block !important;
+	color: red !important;
+}
+.fbs-table{
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+}
+.fbs-table thead tr th{
+	font-weight: bold !important;
+	background-color: #fafafa;
+}
+.fbs-table tr:nth-child(even) {
+	    background-color: #efefef;
+}
+.fbs-table td {
+    border-right: 1px solid #ededed;
+}
+
+.fbs-table tfoot td {
+    border-top: 0px!important;
+}
+
+.fbs-table thead tr th h1{
+	text-align: left !important;
+}
+.fbs-td-1{
+	font-weight: bold !important;
+	width: 222px !important;
+}
+.fbs-td-2{
+	width: 160px !important;
+}
+.fbs-td-2 input {
+	width: 300px!important;
+}
+.fbs-error{
+	color: red !important;
+	display: block !important;
+}
+.fbs-form-element{
+	width: 240px !important;
+	height: 30px !important;
+	font-size: 15px !important;
+}
+.fbs-sub-btn-titles{
+	width: 90% !important;
+	height: 32px !important;
+	font-size: 15px !important;
+}
+.fbs-sub-btn-contents{
+	width: 360px !important;
+	height: 30px !important;
+	font-size: 15px !important;
+}
+#fbs-main-btn-preview-img{
+	border-radius: 100% !important;
+	width: 64px !important;
+    height: auto !important;
+    padding: 10px;
+}
+.fbs-main-btn-preview-img{
+	border-radius: 100% !important;
+	width: 64px !important;
+    height: auto !important;
+    padding: 10px;
+}
+.fbs-sub-btn-preview-img{
+	border-radius: 50% !important;
+	width: 48px !important;
+	height: 48px !important;
+}
+.fbs-sub-btn-sort{
+	cursor: move;
+	opacity: 0.7;
+}
+.fbs-sub-btn-sort:hover{
+	opacity: 1;
+}
+.fbs-sub-btn-rm{
+	color: red !important;
+	cursor: pointer !important;
+	opacity: 0.7 !important;
+}
+.fbs-sub-btn-rm:hover{
+	opacity: 1 !important;
+}
+#fbs-sub-btns-tbody label{
+	font-weight: bold !important; 
+	display: block !important;
+	text-align: left !important;
+	padding-left: 10px !important;
+}
+#fbs-sub-btns-tbody tr td{
+	vertical-align: middle !important;
+	border-bottom: 1px #ccc solid !important;
+}
+.fbs-add-sub-btn-link{
+	opacity: 0.7 !important;
+	margin-right: 7px !important;
+	display: inline-block !important;
+	border-radius: 50% !important;
+	width: 64px !important;
+	height: 64px !important;
+}    
+.fbs-add-sub-btn-link:hover{
+	cursor: pointer !important;
+	opacity: 1 !important;
+}
+.wp-picker-holder{
+	position: absolute !important;
+	z-index: 9999 !important;
+}
