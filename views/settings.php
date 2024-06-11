@@ -14,6 +14,8 @@ $main_text = get_option('fbs_main_text', '');
 $page_slug = get_option('fbs_page_slug', '');
 */
 
+
+
 if(isset($main_img_attachment[0])){
     $main_img_src = $main_img_attachment[0];
 }else{
@@ -31,10 +33,12 @@ add_filter('wp_dropdown_pages', 'make_multiple_select_pages');
 function make_multiple_select_pages($output) {
     return str_replace('<select ', '<select multiple="multiple" ', $output);
 }
-  
+
+$page = $_GET['page'];
+
 ?>
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
 
 <div id="wpbody" role="main">
     <div id="wpbody-content" aria-label="Main content" tabindex="0">
@@ -161,7 +165,7 @@ function make_multiple_select_pages($output) {
 					</td>
 					<td>
 						<input class="fbs-main-btn-color" value="<?php esc_html_e($color) ?>">
-						<small class="fbs-small"><?php _e('Main', 'floating-buttons'); ?></small>
+						<small class="fbs-small"><?php _e('Main/Text', 'floating-buttons'); ?></small>
 						<input class="fbs-main-btn-bg-color" value="<?php esc_html_e($bg_color) ?>">
 						<small class="fbs-small"><?php _e('Background', 'floating-buttons'); ?></small>
 					</td>
@@ -222,8 +226,8 @@ function make_multiple_select_pages($output) {
                         <?php foreach($fbs_sub_btns as $fbs_sub_btn): ?>
                             <?php $fbs_sub_btn = fbs_parse_content($fbs_sub_btn); ?>
                             <?php list($sub_parent, $sub_type, $sub_title, $sub_link, $sub_img, $sub_color, $sub_bg_color) = explode('|', $fbs_sub_btn); ?>
-                            <tr data-type="<?php esc_html_e($type) ?>">
-								<td>
+                            <tr data-type="<?php esc_html_e($sub_type) ?>">
+								<td><span class="dashicons dashicons-no fbs-sub-btn-rm"></span>
 									<select class="fbs-type fbs-form-element-lower buttonsforsub">
 										<?php
 										foreach ($buttonsforsub as $key => $value) {
@@ -236,7 +240,7 @@ function make_multiple_select_pages($output) {
 									</select>
 								</td>
 							    <td>
-                                    <span class="dashicons dashicons-no fbs-sub-btn-rm"></span>
+                                    
                                     <input class="fbs-sub-btn-titles" value="<?php esc_html_e($sub_title) ?>">
                                 </td>
                                 <td>

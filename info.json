@@ -1,0 +1,23 @@
+{
+	"name" : "Floating Buttons",
+	"slug" : "floating-buttons",
+	"author" : "<a href='https://infinus.ca'>Infinus</a>",
+	"author_profile" : "https://brendancarr.ca",
+	"version" : "1.0.1",
+	"download_url" : "https://github.com/brendancarr/floating-buttons/archive/refs/heads/main.zip",
+	"requires" : "5.6",
+	"tested" : "6.5.4",
+	"requires_php" : "5.6",
+	"added" : "2024-06-16 02:10:00",
+	"last_updated" : "2024-06-10 10:08:00",
+	"homepage" : "https://infinus.ca",
+	"sections" : {
+		"description" : "Display Floating Buttons on your WordPress front-end. Based on work by Faraz Quazi.",
+		"installation" : "Click the activate button and that's it.",
+		"changelog" : "<h4>v1.0 released on June 6, 2024</h4><ul><li>Feature: Free for everyone. Unlimited buttons and display filters.</li></ul><h4>v1.0.1 released on June 10, 2024</h4><ul><li>Improvement: Add settings link to plugin page.</li><li>Improvement: Clean up old code from previous plugin development</li><li>Moved select2 to enqueue</li><li>Revised code for popup buttons</li><li>Fix snapcode generator</li><li>Fix color picker popup</ul>"
+	},
+	"banners" : {
+		"low" : "https://github.com/brendancarr/floating-buttons/blob/906e18ad9eb2e4df861207655962be652d724124/assets/banner.jpg",
+		"high" : "https://github.com/brendancarr/floating-buttons/blob/906e18ad9eb2e4df861207655962be652d724124/assets/banner.jpg"
+	}
+}

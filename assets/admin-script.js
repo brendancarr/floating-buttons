@@ -80,9 +80,11 @@ jQuery(document).ready(function(){
     });
 
 	fbs_ini_for_sub_btn();
+	jQuery(".fbs-page-select").select2();
 });
 
 function fbs_ini_for_sub_btn(){
+	
 	jQuery(".fbs-sub-btn-colors").wpColorPicker({
 	    defaultColor: false,
 	    hide: true,
@@ -93,6 +95,7 @@ function fbs_ini_for_sub_btn(){
 	    clear: function(){
 	    },
 	});
+	
 	jQuery(".fbs-sub-btn-bg-colors").wpColorPicker({
 	    defaultColor: false,
 	    hide: true,
@@ -103,6 +106,7 @@ function fbs_ini_for_sub_btn(){
 	    clear: function(){
 	    },
 	});
+	
 }
 
 jQuery(document).on("click", "#save-changes-btn", function(){
@@ -111,17 +115,7 @@ jQuery(document).on("click", "#save-changes-btn", function(){
     var _wpnonce = jQuery("input[name='_wpnonce']").val();
     var _wp_http_referer = jQuery("input[name='_wp_http_referer']").val();
 	var status = true;
-	/*
-	var activate = jQuery("#fbs-activate").val().trim();
-	var position = jQuery("#fbs-position").val().trim();
-	var type = jQuery("#fbs-type").val().trim();
-	var m_img_id = jQuery("#fbs-main-btn-icon").data("id");
-	var m_color = jQuery("#fbs-main-btn-color").val().trim();
-	var m_bg_color = jQuery("#fbs-main-btn-bg-color").val().trim();
-	var m_link = jQuery("#fbs-main-btn-link").val().trim();
-	var m_text = jQuery("#fbs-main-btn-text").val().trim();
-	var m_page_slug = jQuery("#fbs-page-slug").val().trim();
-	*/
+
 	var buttons = new Array();
 	jQuery("#fbs-btns-tbody").find("tr").each(function(){
 		
@@ -153,7 +147,7 @@ jQuery(document).on("click", "#save-changes-btn", function(){
 		sub_buttons.push(row);
 	});
 
-savevars(_wp_http_referer, _wpnonce, buttons, sub_buttons, status);
+	savevars(_wp_http_referer, _wpnonce, buttons, sub_buttons, status);
 	
 });
 
@@ -212,9 +206,10 @@ function fbs_new_button(selectbox){
 		</tr>
 		`;
 	jQuery("#fbs-btns-tbody").append(html);
-	colorify();
+	
+	colorify(); // shows color pickers
 		
-	jQuery(".fbs-page-select").select2();
+	jQuery(".fbs-page-select").select2(); // sets select2
 
 }
 
@@ -242,6 +237,7 @@ function colorify() {
 	    },
 	});
 }
+
 function fbs_add_sub_button(type, bg_color, img){
     var image_html = '<img class="fbs-sub-btn-preview" src="<?php echo FBS_PLUGIN_URL; ?>assets/img/'+ type +'.png">';
     var html = '';
@@ -284,11 +280,4 @@ function fbs_add_sub_button(type, bg_color, img){
 
 jQuery(document).on("click", ".fbs-sub-btn-rm", function(){
 	jQuery(this).parent().parent().remove();
-});
-
-
-
-jQuery(document).ready(function() {
-    jQuery(".fbs-page-select").select2();
-	
 });

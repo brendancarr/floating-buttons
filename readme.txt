@@ -1,19 +1,35 @@
-=== Floating Action Button ===
-Contributors: farazify
-Donate link: https://www.paypal.me/farazify
+=== Floating Buttons ===
+Contributors: farazify, brendancarr
 Tags: fab, Floating Action Button, buttons for front-end, text button, whatsapp button, facebook messenger button, phone button, email button, viber button, snapchat button, line button, intercom button
 Requires at least: 3.7
-Tested up to: 6.4
-Stable tag: 1.2.2
+Tested up to: 6.5.4
+Stable tag: 1.0.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Display the beautiful FAB (Floating Action Button) on your WordPress front-end.
+Display floating buttons on your WordPress website.
 
 == Description ==
 
-FAB (Floating Action Button) is a Free & Light Weight WordPress plugin which displays the beautiful Floating Action Button on your WordPress front-end. After triggering/hovering the main button it will pop-up and shows the row of sub buttons with details. This plugin provides the 9 types of the following buttons with different-different functionalities:
+FBS (Floating Buttons) is a Free & Light Weight WordPress plugin which displays floating buttons for users to interact with on your WordPress front-end. 
+After triggering/hovering the main button it will click through to the link specified, or pop-up and show the row of sub buttons with details.
+
+This includes the ability to close the button and hide it until 10 sessions have passed. This is done via a cookie.
+
+Future releases will give you more control over number of times it's shown and when it's shown.
+
+Unlimited parent buttons, which can be text based or have an icon to click on.
+
+Buttons have the following types:
+
+1. Simple Click with Icon
+2. Simple Click using text
+3. Display sub buttons when you click the text
+4. Display sub buttons when you click the icon
+5. Display sub buttons when you hover over the icon
+
+Sub buttons can be any of the following:
 
 1. Text Button
 2. WhatsApp Button (Click to Chat)
@@ -27,18 +43,20 @@ FAB (Floating Action Button) is a Free & Light Weight WordPress plugin which dis
 
 **Admin Setting Panel**
 
-* Basic Settings
-1. Activate/Deactivate Floating Action Button
-2. Change the Position of Floating Action Button to Top-Left/Top-Right/Bottom-Left/Bottom-Right
-3. Option to Trigger Button by Mouse-Click or Mouse-Hover
+* Each Button is separate and dynamic, allowing for unlimited buttons *
 
-* Main Button Settings
-1. Set Button Icon
-2. Set Button Icon Color
-3. Set Button Background Color
+1. Activate/Deactivate
+2. Change the Position of Floating Action Button to Top-Left/Top-Right/Bottom-Left/Bottom-Right
+3. Choose the type of button (see above)
+4. Choose the link
+5. Set the title
+6. Choose what pages it is visible on
+7. Set Button Icon Color
+8. Set Button Background Color
+9. Set Button Icon
 
 * Sub Buttons Settings
-1. Add Text Button with WP Shortcode Support
+1. Add Text Button (with WP Shortcode Support)
 2. Add WhatsApp Button
 3. Add FaceBook Messenger Button
 4. Add Phone Button
@@ -54,14 +72,15 @@ FAB (Floating Action Button) is a Free & Light Weight WordPress plugin which dis
 14. Change Background Color
 15. Buttons Sorting with Drag & Drop functionality
 16. Remove Buttons
+17. Choose what parent button the sub button shows on
 
 == Installation ==
 
 1. Just log into your WordPress admin dashboard
 2. Visit Dashboard > Sidebar > Plugins > Add New
-3. Search for “Floating Action Button”
-4. Install and Activate the “Floating Action Button” plugin
-5. Visit Dashboard > Sidebar > FAB Settings
+3. Search for “Floating Buttons”
+4. Install and Activate the “Floating Buttons” plugin
+5. Visit Dashboard > Sidebar > Floating Buttons
 6. Activate the Floating Action Button to display on front-end
 7. Customize the Position, Icon and Color of Main Button 
 8. Add Sub Buttons according to your requirements
@@ -110,30 +129,18 @@ You can use valid Line URL like this http://line.me/ti/p/xxxxxx
 
 You can use Intercom App ID
 
-== Screenshots ==
 
-1. screenshot-1.png - Floating Action Button Visualization
-2. screenshot-2.png - Basic Settings
-3. screenshot-3.png - Main Button Settings
-4. screenshot-4.png - Sub Buttons Settings
 
 == Changelog ==
-
-= 1.2.2 =
-* Security fixes.
-
-= 1.2.1 =
-* Security fixes.
-
-= 1.2.0 =
-* Add WhatsApp Click to Chat Button.
-
-= 1.1.0 =
-* Add default colors according to button.
 
 = 1.0.0 =
 * First version of the plugin released.
 
-== Upgrade Notice ==
-= 1.0.0 =
-* Not Applicable
+= 1.0.1 =
+* Revise readme
+* Remove old code
+* Add settings link
+* Move select2 to enqueue
+* Revise popup code
+* Fix snapcode generator
+* Fix color picker popup

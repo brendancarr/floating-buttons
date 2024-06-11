@@ -3,7 +3,7 @@
 Plugin Name: Floating Buttons
 Plugin URI: https://infinus.ca
 Description: Display Floating Buttons on your WordPress front-end. Based on work by Faraz Quazi.
-Version: 1.0.0
+Version: 1.0.1
 Author: Infinus
 Author URI: https://infinus.ca
 License: GPLv2 or later
@@ -84,6 +84,10 @@ add_action( 'admin_enqueue_scripts', function(){
 	$url = FBS_PLUGIN_URL.'assets/admin-script.js';
 	wp_register_script( 'fbs-admin-script', $url, array( 'jquery', 'wp-color-picker' ) );
 	wp_enqueue_script( 'fbs-admin-script' );
+	
+	wp_enqueue_script( 'select2', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array(), '4.1.0', true );
+	wp_enqueue_style( 'select2style', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' );
+	
 }); 
 
 add_action( 'admin_menu', function(){
@@ -134,6 +138,15 @@ function fbs_parse_content( $str='' ){
 	$str = str_replace( "\`", "`", $str );
 	return $str;
 }
+
+function plugin_add_settings_link( $links ) {
+    $settings_link = '<a href="admin.php?page=fbs-button-frontend-settings">' . __( 'Settings' ) . '</a>';
+    array_push( $links, $settings_link );
+    return $links;
+}
+
+$plugin = plugin_basename( __FILE__ );
+add_filter( "plugin_action_links_$plugin", 'plugin_add_settings_link' );
 
 /* End of Plugin File */
 ?>
