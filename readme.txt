@@ -144,3 +144,6 @@ You can use Intercom App ID
 * Revise popup code
 * Fix snapcode generator
 * Fix color picker popup
+
+= 1.0.2 =
+* Update API
