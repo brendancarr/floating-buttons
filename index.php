@@ -3,7 +3,7 @@
 Plugin Name: Floating Buttons
 Plugin URI: https://infinus.ca
 Description: Display Floating Buttons on your WordPress front-end. Based on work by Faraz Quazi.
-Version: 1.0.1
+Version: 1.0.2
 Author: Infinus
 Author URI: https://infinus.ca
 License: GPLv2 or later
